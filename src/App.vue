@@ -1,11 +1,13 @@
 <template>
     <div class="app">
-        <Tweet />
+        <Tweet :tweet="tweets[0]" />
     </div>
 </template>
   
 <script setup>
+import { ref } from 'vue';
 import Tweet from './components/Tweet.vue';
+
 const tweets = [
     {
         user: {
